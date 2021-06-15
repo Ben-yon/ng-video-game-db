@@ -30,7 +30,7 @@ import { DetailsComponent } from './components/details/details.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    GaugeModule,
+    GaugeModule.forRoot(),
     HttpClientModule,
     MatFormFieldModule,
     MatSelectModule,

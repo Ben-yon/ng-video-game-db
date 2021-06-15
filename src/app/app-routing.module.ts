@@ -2,6 +2,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailsComponent } from './components/details/details.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'search/:game-search',
     component: SearchBarComponent
+  },
+  {
+    path: 'details/:id',
+    component: DetailsComponent,
   }
 ];
 

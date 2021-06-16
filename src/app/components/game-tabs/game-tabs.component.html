@@ -1,13 +1,17 @@
 <div class="game-tabs">
     <mat-tab-group mat-align-tabs="start" backgroundColor="primary">
         <mat-tab label="About">
-            <p class="game-tabs-par">
+            <p *ngIf="game.parent_platforms?.length" class="game-tabs-par">
                 Platforms:
-                <span>PC</span>
+                <span *ngFor="let game of game.parent_platforms; let last = last;">
+                    {{ game.platform.name }} <span *ngIf="!last">,</span>
+                </span>
             </p>
-            <p class="game-tabs-par">
+            <p *ngIf="game.publishers?.length" class="game-tabs-par">
                 Publishers:
-                <span>Konami</span>
+                <span *ngFor="let publisher in game.publishers; let last = last">
+                    <span>{{ publisher }} <span *ngIf="!last">,</span></span>
+                </span>
             </p>
             <p class="game-tabs-par">
                 Website:
